@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      <h1>Hello todo 2022 </h1>
+      <h1>starting first component </h1>
     </div>
   );
 }
