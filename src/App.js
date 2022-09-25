@@ -3,11 +3,36 @@ import "./App.css";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
+
+
+
+
+
+const getlocaldata = () => {
+  let list = localStorage.getItem("todos");
+
+  if (list) {
+    return JSON.parse(localStorage.getItem("todos"));
+  } else {
+    return [];
+  }
+};
+
 function App() {
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(getlocaldata());
   const [status, setStatus] = useState("all");
   const [filtered, Setfilterd] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
+    filteredHandler();
+
+    // eslint-disable-next-line
+  }, [todos, status]);
 
   const filteredHandler = () => {
     switch (status) {
@@ -21,12 +46,18 @@ function App() {
 
       default:
         Setfilterd(todos);
+        break;
     }
   };
 
-  useEffect(() => {
-    filteredHandler();
-  }, [todos, status]);
+  // const getlocaltodos = () => {
+  //   if (localStorage.getItem("todos") === null) {
+  //     localStorage.setItem("todos", JSON.stringify([]));
+  //   } else {
+  //     let todolocal = JSON.parse(localStorage.getItem("todos"));
+  //     setTodos(todolocal);
+  //   }
+  // };
 
   return (
     <div className="App">
