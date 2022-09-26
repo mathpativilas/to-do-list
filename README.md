@@ -5,4 +5,4 @@ https://my-to-do-vilas.netlify.app
 
 
 
-<img src="./src/Screenshot (9).png" width="128"/>
+<img src="./src/Screenshot (9).png" width="668"/>
