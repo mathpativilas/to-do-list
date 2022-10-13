@@ -8,6 +8,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  padding: 25px;
 }
 header {
   font-size: 2rem;
@@ -17,7 +18,7 @@ header,
 form {
   min-height: 20vh;
   display: flex;
-  width: 100%;
+
   justify-content: center;
   align-items: center;
  
@@ -25,10 +26,12 @@ form {
 form input,
 form button {
   padding: 0.5rem;
+  
   font-size: 2rem;
   border: none;
   background: white;
 }
+
 form button {
   color: #ff6f47;
   background: #f7fffe;
@@ -110,6 +113,7 @@ select {
   background-image: none;
 }
 
+
 /* Custom Select */
 .select {
   margin: 1rem;
@@ -143,9 +147,10 @@ select {
 @media screen and (max-width: 600px) {
  .select{
  position: absolute;
- top: 250px;
+ top: 300px;
  }
- .todo{
-  margin-top: 40px;
+ .todo-container{
+  margin-top: 68px;
  }
+
 }
