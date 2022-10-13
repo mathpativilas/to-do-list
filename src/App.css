@@ -147,7 +147,7 @@ select {
 @media screen and (max-width: 600px) {
  .select{
  position: absolute;
- top: 300px;
+ top: 400px;
  }
  .todo-container{
   margin-top: 68px;
