@@ -151,5 +151,10 @@ form{
   align-items: center;
   flex-direction: column;
 }
+form button{
+  padding: 7px 29px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
 
 }
