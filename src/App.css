@@ -145,12 +145,11 @@ select {
 */
 
 @media screen and (max-width: 600px) {
- .select{
- position: fixed;
- top: 400px;
- }
- .todo-container{
-  margin-top: 98px;
- }
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 }
